@@ -135,8 +135,9 @@ dall |>
                    list(mean = mean,
                         sd = sd))) |> 
   ggplot() +
-  geom_point(aes(x = ppfd_mean,
-                 y = rate_mean)) +
+  geom_point(aes(x = ppfd_mean, y = rate_mean)) +
+  scale_x_continuous("PPFD") +
+  scale_y_continuous("RATE") +
   facet_grid(rows = vars(location),
              cols = vars(position))
 
